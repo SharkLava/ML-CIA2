@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="gruvbox-background">
+    <div class="terminal">
+        <div class="terminal-header">
+            <span class="terminal-header-item gruvbox-color-1">Login</span>
+        </div>
+        <form class="terminal-form" method="POST">
+            <div class="terminal-body">
+                <div class="terminal-line">
+                    <span class="terminal-prompt">Username: </span>
+                    <input type="text" id="username" name="username" class="terminal-input" required autofocus>
+                </div>
+                <div class="terminal-line">
+                    <span class="terminal-prompt">Password: </span>
+                    <input type="password" id="password" name="password" class="terminal-input" required>
+                </div>
+            </div>
+            <div class="terminal-footer">
+                <button type="submit" class="terminal-button gruvbox-color-2">Log in</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

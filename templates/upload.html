@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Upload Image</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="bg-gruvbox">
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-gruvbox-light">
+                        <h1 class="text-center gruvbox-color-2">Upload Image</h1>
+                    </div>
+                    <div class="card-body">
+                        <form method="POST" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="image" class="gruvbox-color-2">Choose an image to upload:</label>
+                                <div class="custom-file gruvbox-color-2">
+                                    <input type="file" class="custom-file-input" id="image" name="image">
+                                    <label class="custom-file-label" for="image">Select file</label>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-gruvbox btn-block">Upload</button>
+                            </div>
+                        </form>
+                        {% if image_filename %}
+                        <hr class="gruvbox-bg-color">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="text-center">
+                                    <h2 class="my-3 gruvbox-color-2">Uploaded Image:</h2>
+                                    <div class="card">
+                                        <img src="{{ url_for('static', filename=image_filename) }}"
+                                            class="card-img-top img-fluid" alt="Uploaded Image"
+                                            style="max-width: 500px; max-height: 500px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="text-center">
+                                    <h2 class="my-3 gruvbox-color-2">Result:</h2>
+                                    <p class="gruvbox-color-2">Predicted emotion: {{ emotion }}</p>
+                                    <p class="gruvbox-color-2">Probability: {{ probability }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

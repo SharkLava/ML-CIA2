@@ -1,0 +1,69 @@
+/* Colors from the Gruvbox theme */
+:root {
+    --gruvbox-bg: #282828;
+    --gruvbox-fg: #ebdbb2;
+    --gruvbox-red: #cc241d;
+    --gruvbox-green: #98971a;
+    --gruvbox-yellow: #d79921;
+    --gruvbox-blue: #458588;
+    --gruvbox-purple: #b16286;
+    --gruvbox-aqua: #689d6a;
+}
+
+body {
+    background-color: var(--gruvbox-bg);
+    color: var(--gruvbox-fg);
+    font-family: monospace;
+    font-size: 18px;
+}
+
+h1 {
+    color: var(--gruvbox-yellow);
+    font-size: 28px;
+    margin: 20px 0;
+}
+
+form {
+    background-color: var(--gruvbox-bg);
+    border: 1px solid var(--gruvbox-green);
+    border-radius: 5px;
+    padding: 20px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+    background-color: var(--gruvbox-bg);
+    border: 1px solid var(--gruvbox-purple);
+    border-radius: 5px;
+    color: var(--gruvbox-fg);
+    font-family: monospace;
+    font-size: 18px;
+    padding: 10px;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: var(--gruvbox-blue);
+    border: none;
+    border-radius: 5px;
+    color: var(--gruvbox-fg);
+    font-family: monospace;
+    font-size: 18px;
+    padding: 10px;
+    width: 100%;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--gruvbox-aqua);
+    color: var(--gruvbox-bg);
+}
